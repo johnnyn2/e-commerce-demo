@@ -1,7 +1,7 @@
 
 # A 3-tier large-scale e-commerce platform demo project
 
-![Architecture]((https://raw.github.com/johnnyn2/e-commerce-demo/master/design/e-commerce-demo-architecture.png))
+![image](https://raw.github.com/johnnyn2/e-commerce-demo/master/design/e-commerce-demo-architecture.png)
 
 ### Web Frontend
 1. Angular
