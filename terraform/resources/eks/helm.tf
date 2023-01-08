@@ -6,6 +6,7 @@ provider "helm" {
     }
 }
 
+// deploy ingress controller which is AWS ALB
 resource "helm_release" "ingress" {
     name = "ingress"
     chart = "aws-load-balancer-controller"
@@ -23,4 +24,12 @@ resource "helm_release" "ingress" {
         name  = "clusterName"
         value = local.cluster_name
     }
+}
+
+// deploy the application which include ingress rules
+resource "helm_release" "app" {
+    name = "application"
+    chart = "ecommerce-demo"
+    repository = "https://mygithubpages.io/ecommerce-demo-charts"
+    version = "0.1.0"
 }
